@@ -43,19 +43,28 @@
   <body>
       <main id="main-content" class="main-content">
           <noscript>To use the Bitcoin Price tool, please enable Javascript in your browser</noscript>
-          <section id="current-price">
-              <div id="selected-currency">$</div>55000
+          <header>
+              The Current Bitcoin Price
+          </header>
+          <section id="price-intro">
+              Bitcoin is now worth
           </section>
-          <section id="currency-buttons">
-              <button>
-                  Dollars
-              </button>
-              <button>
-                  Euros
-              </button>
-              <button>
-                  Pounds
-              </button>
+          <section id="current-price">
+              <span id="selected-currency">$</span><span id="price-digits">55000</span>
+          </section>
+          <section id="currency-buttons" class="grid-container">
+
+              <ul class="usa-button-group usa-button-group--segmented grid-container">
+  <li class="usa-button-group__item grid-col">
+    <button id="dollars-button" class="usa-button">Dollars</button>
+  </li>
+  <li class="usa-button-group__item grid-col">
+    <button id="euros-button" class="usa-button usa-button--outline">Euros</button>
+  </li>
+  <li class="usa-button-group__item grid-col">
+    <button id="pounds-button" class="usa-button usa-button--outline">Pounds</button>
+  </li>
+</ul>
           </section>
           <!--the browser refresh button can do the refreshing-->
           <section id="refresh-button">

@@ -1,3 +1,48 @@
 html, body, main {
     height:100%;
 }
+
+main {
+    padding-top: 5%;
+}
+
+header, section, aside {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+header {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+ul {
+    margin: 0 auto;
+    width: 100%;
+}
+
+button {
+    font-size: 1.5rem;
+}
+
+.usa-button-group--segmented .usa-button,.usa-button-group--segmented .usa-button-group__item:last-child > .usa-button {
+    width: 100%;
+}
+
+#price-intro {
+    font-size: 3.3rem;
+}
+
+#selected-currency, #price-digits {
+    font-size: 4rem;
+}
+
+#currency-buttons {
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+#refresh-button {
+    margin-bottom: 0.75rem;
+}
