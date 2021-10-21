@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "jest": "^27.3.1"
+  },
+  "dependencies": {
+    "uswds": "^2.12.1"
   }
 }
