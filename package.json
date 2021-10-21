@@ -19,6 +19,7 @@
     "parcel": "^2.0.0"
   },
   "dependencies": {
+    "date-fns": "^2.25.0",
     "node-fetch": "2",
     "uswds": "^2.12.1"
   },
