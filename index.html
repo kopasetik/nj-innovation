@@ -35,13 +35,40 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.12.1/css/uswds.css"
     />
+      <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
   </head>
   <body>
       <main id="main-content" class="main-content">
           <noscript>To use the Bitcoin Price tool, please enable Javascript in your browser</noscript>
+          <section id="current-price">
+              <div id="selected-currency">$</div>55000
+          </section>
+          <section id="currency-buttons">
+              <button>
+                  Dollars
+              </button>
+              <button>
+                  Euros
+              </button>
+              <button>
+                  Pounds
+              </button>
+          </section>
+          <!--the browser refresh button can do the refreshing-->
+          <section id="refresh-button">
+              <button>
+                  Refresh
+              </button>
+          </section>
+          <aside id="last-updated">
+              Last updated: <span id="update-time">10:35 AM (GMT-7) on September 17th, 2021</span>
+          </aside>
       </main>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.12.1/js/uswds.js"></script>
-        <!--<script src="./script.js"></script>-->
+        <!--<script src="./index.js"></script>-->
   </body>
 </html>
