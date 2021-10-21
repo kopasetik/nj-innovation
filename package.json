@@ -2,18 +2,27 @@
   "name": "nj-innovation",
   "version": "0.0.0",
   "description": "nj dept of innovation code challenge",
-  "main": "index.js",
   "repository": "git@github.com:kopasetik/nj-innovation.git",
   "author": "Wale O. <dev@screenverve.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "jest"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest --watch"
   },
   "devDependencies": {
-    "jest": "^27.3.1"
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-jest": "^27.3.1",
+    "jest": "^27.3.1",
+    "parcel": "^2.0.0"
   },
   "dependencies": {
+    "node-fetch": "2",
     "uswds": "^2.12.1"
-  }
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
