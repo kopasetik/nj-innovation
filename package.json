@@ -6,5 +6,11 @@
   "repository": "git@github.com:kopasetik/nj-innovation.git",
   "author": "Wale O. <dev@screenverve.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
