@@ -4,7 +4,6 @@ const convertTime = require('./convertTime')
 const fetchPrice = require('./fetchPrice')
 const highlightCurrency = require('./highlightCurrency')
 const isDueForNewUpdate = require('./isDueForNewUpdate')
-const isSameCurrencyAsBefore = require('./isSameCurrencyAsBefore')
 const processPrice = require('./processPrice')
 const swapCurrencySymbol = require('./swapCurrencySymbol')
 const updateDOM = require('./updateDOM')
@@ -12,6 +11,8 @@ const updateDOM = require('./updateDOM')
 const main = document.getElementById('main-content')
 
 let lastUpdated = localStorage.getItem('lastUpdated')
+
+if (localStorage.getItem('lastCurrency') === null) localStorage.setItem('lastCurrency', 'dollars')
 
 main.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON'){
