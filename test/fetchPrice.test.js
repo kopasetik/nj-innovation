@@ -44,13 +44,16 @@ describe('call the api', () => {
         
     it('should have all 3 currencies', async () => {
        const USD = await fetchPrice(localStorage)
-            .then(({USD}) => expect(USD).toMatchObject({code: 'USD'}))
+            .then(([{USD}, _]) => expect(USD).toMatchObject({code: 'USD'}))
                                                   
         await fetchPrice(localStorage)
-        .then(({EUR}) => expect(EUR).toMatchObject({code: 'EUR'}))
+        .then(([{EUR}, _])  => expect(EUR).toMatchObject({code: 'EUR'}))
                                                   
         await fetchPrice(localStorage)
-            .then(({GBP}) => expect(GBP).toMatchObject({code: 'GBP'}))
+            .then(([{GBP}, _])  => expect(GBP).toMatchObject({code: 'GBP'}))
+        
+        await fetchPrice(localStorage)
+            .then(([_, {updatedISO}])  => expect(updatedISO).toEqual(expect.stringMatching(/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d/)))
     
     })
 })

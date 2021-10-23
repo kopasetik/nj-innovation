@@ -1,8 +1,10 @@
-const cacheData = require('./cacheData')
+const cacheFetchData = require('./cacheFetchData')
+const cacheLastCurrency = require('./cacheLastCurrency')
 const convertTime = require('./convertTime')
 const fetchPrice = require('./fetchPrice')
 const highlightCurrency = require('./highlightCurrency')
 const isDueForNewUpdate = require('./isDueForNewUpdate')
+const isSameCurrencyAsBefore = require('./isSameCurrencyAsBefore')
 const processPrice = require('./processPrice')
 const swapCurrencySymbol = require('./swapCurrencySymbol')
 const updateDOM = require('./updateDOM')
@@ -13,24 +15,35 @@ let lastUpdated = localStorage.getItem('lastUpdated')
 
 main.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON'){
-        if (isDueForNewUpdate) {
-            cacheData(localStorage, fetchPrice)
-            updateDOM('#update-time', convertTime(ISODate)) // with reformatted ISO date
-        }
-        const ISODate = `2021-09-17T17:35:00+00:00`        
-        let latestCurrency = 'dollars'
-
-        buttonDictionary = {
-            'refresh-button': 'dollars',
+        
+        if (e.target.id === 'refresh-button'){ 
+            if (!isDueForNewUpdate(localStorage)) return
+            
+            cacheFetchData(localStorage, fetchPrice)
+            updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+            let lastCurrency = localStorage.getItem('lastCurrency')
+            updateDOM('#price-digits', localStorage.getItem(lastCurrency))
+            
+            return
+                                            }
+        
+        const buttonDictionary = {
             'dollars-button': 'dollars',
             'euros-button': 'euros',
             'pounds-button': 'pounds',
         }
         
-        latestCurrency = buttonDictionary[e.target.id]
+        let lastCurrency = buttonDictionary[e.target.id]        
+        cacheLastCurrency(localStorage, lastCurrency)
         
-        updateDOM('#price-digits', localStorage.getItem(latestCurrency)) // with last selected currency
-        swapCurrencySymbol(latestCurrency)
-        // highlightCurrency(latestCurrency)
+        if (isDueForNewUpdate(localStorage)) {
+            cacheFetchData(localStorage, fetchPrice)
+            updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+        }
+
+        updateDOM('#price-digits', localStorage.getItem(lastCurrency))
+        swapCurrencySymbol(lastCurrency)
+        // highlightCurrency(lastCurrency)
+
     }
-},)
+}, false)
