@@ -9,8 +9,13 @@ const swapCurrencySymbol = require('./swapCurrencySymbol')
 const updateDOM = require('./updateDOM')
 
 const main = document.getElementById('main-content')
-
-let lastUpdated = localStorage.getItem('lastUpdated')
+    
+if (localStorage.getItem('lastUpdated') === null) {
+    cacheFetchData(localStorage, fetchPrice).then(() => {
+        updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+        updateDOM('#price-digits', localStorage.getItem('dollars'))
+    })
+}
 
 if (localStorage.getItem('lastCurrency') === null) localStorage.setItem('lastCurrency', 'dollars')
 
@@ -59,11 +64,5 @@ main.addEventListener('click', (e) => {
     }
 }, false)
 
-    
-if (localStorage.getItem('lastUpdated') === null) {
-    cacheFetchData(localStorage, fetchPrice).then(() => {
-        updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
-        updateDOM('#price-digits', localStorage.getItem('dollars'))
-    })
-}
+
     
