@@ -38,7 +38,7 @@ const mockStorage = function () {
 describe('sees if update was 5+ mins ago', ()=>{
 
     it('returns false if last update happened in past 5 mins', ()=>{
-        const justNow = performance.now()
+        const justNow = Date.now()
         localStorage.setItem('latestUpdate', justNow)
         
  expect(isDueForNewUpdate(localStorage)).toEqual(false)
@@ -50,7 +50,7 @@ describe('sees if update was 5+ mins ago', ()=>{
         
         const fiveMins = 5 * 60 * 1000
     
-    const moreThanFiveMinsAgo = performance.now()-(fiveMins+5000)
+    const moreThanFiveMinsAgo = Date.now()-(fiveMins+5000)
     localStorage.setItem('latestUpdate', moreThanFiveMinsAgo)      
        
  expect(isDueForNewUpdate(localStorage)).toEqual(true)
