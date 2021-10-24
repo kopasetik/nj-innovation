@@ -1,11 +1,11 @@
 const isDueForNewUpdate = (storage) => {
     const now = Date.now()
     
-    const latestUpdate = Number.parseInt(localStorage.getItem('latestUpdate'),10)
+    const lastUpdated = Number.parseInt(localStorage.getItem('lastUpdated'),10)
 
 const fiveMins = 5 * 60 * 1000
 
-return now > (latestUpdate + fiveMins)
+return now > (lastUpdated + fiveMins)
                                              
 }
 
