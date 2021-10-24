@@ -23,6 +23,11 @@ if (localStorage.getItem('ISODate') === null){
     const now = Date.now()
     const ISOString = (new Date(Date.now())).toISOString()
     localStorage.setItem('ISODate', ISOString)
+                                             } else {
+    let lastCurrency = localStorage.getItem('lastCurrency')    
+    updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+    updateDOM('#price-digits', localStorage.getItem(lastCurrency))
+    swapCurrencySymbol(lastCurrency)
                                              }
 
 
