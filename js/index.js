@@ -14,13 +14,20 @@ let lastUpdated = localStorage.getItem('lastUpdated')
 
 if (localStorage.getItem('lastCurrency') === null) localStorage.setItem('lastCurrency', 'dollars')
 
+async (() => {
+    if (localStorage.getItem('lastCurrency') === null) {
+    await cacheFetchData(localStorage, fetchPrice)
+    updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+    updateDOM('#price-digits', localStorage.getItem('dollars'))
+}
+    
 main.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON'){
         
         if (e.target.id === 'refresh-button'){ 
             if (!isDueForNewUpdate(localStorage)) return
             
-            cacheFetchData(localStorage, fetchPrice)
+            await cacheFetchData(localStorage, fetchPrice)
             updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
             let lastCurrency = localStorage.getItem('lastCurrency')
             updateDOM('#price-digits', localStorage.getItem(lastCurrency))
@@ -38,7 +45,7 @@ main.addEventListener('click', (e) => {
         cacheLastCurrency(localStorage, lastCurrency)
         
         if (isDueForNewUpdate(localStorage)) {
-            cacheFetchData(localStorage, fetchPrice)
+            await cacheFetchData(localStorage, fetchPrice)
             updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
         }
 
@@ -48,3 +55,5 @@ main.addEventListener('click', (e) => {
 
     }
 }, false)
+    
+})()
