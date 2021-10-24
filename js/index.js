@@ -13,8 +13,14 @@ const main = document.getElementById('main-content')
 let lastUpdated = localStorage.getItem('lastUpdated')
 
 if (localStorage.getItem('lastCurrency') === null) localStorage.setItem('lastCurrency', 'dollars')
+
+if (localStorage.getItem('ISODate') === null){ 
+    const now = Date.now()
+    const ISOString = (new Date(Date.now())).toISOString()
+    localStorage.setItem('ISODate', ISOString)
+                                             }
     
-if (localStorage.getItem('lastCurrency') === null) {
+if (localStorage.getItem('lastUpdated') === null) {
     cacheFetchData(localStorage, fetchPrice).then(() => {
         updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
         updateDOM('#price-digits', localStorage.getItem('dollars'))
