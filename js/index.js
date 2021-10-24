@@ -19,13 +19,7 @@ if (localStorage.getItem('ISODate') === null){
     const ISOString = (new Date(Date.now())).toISOString()
     localStorage.setItem('ISODate', ISOString)
                                              }
-    
-if (localStorage.getItem('lastUpdated') === null) {
-    cacheFetchData(localStorage, fetchPrice).then(() => {
-        updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
-        updateDOM('#price-digits', localStorage.getItem('dollars'))
-    })
-}
+
 
 main.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON'){
@@ -64,4 +58,12 @@ main.addEventListener('click', (e) => {
 
     }
 }, false)
+
+    
+if (localStorage.getItem('lastUpdated') === null) {
+    cacheFetchData(localStorage, fetchPrice).then(() => {
+        updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+        updateDOM('#price-digits', localStorage.getItem('dollars'))
+    })
+}
     
