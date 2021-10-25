@@ -18,7 +18,10 @@ if (localStorage.getItem('lastUpdated') === null) {
     })
 }
 
-if (localStorage.getItem('lastCurrency') === null) localStorage.setItem('lastCurrency', 'dollars')
+if (localStorage.getItem('lastCurrency') === null) {
+    localStorage.setItem('lastCurrency', 'dollars')
+    highlightCurrency('dollars')
+}
 
 if (localStorage.getItem('ISODate') === null){ 
     const now = Date.now()
