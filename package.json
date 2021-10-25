@@ -21,7 +21,6 @@
   "dependencies": {
     "@parcel/babel-preset-env": "^2.0.0",
     "date-fns": "^2.25.0",
-    "nightmare": "^3.0.2",
     "node-fetch": "2",
     "uswds": "^2.12.1"
   },

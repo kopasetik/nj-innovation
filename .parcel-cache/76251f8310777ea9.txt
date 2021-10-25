@@ -1,16 +1,18 @@
-33444
+33448
 45/home/kopasetik/Code/nj-innovation/.gitignore1634869040618340963 0
-58/home/kopasetik/Code/nj-innovation/js/isDueForNewUpdate.js1634998784929106486 0
+55/home/kopasetik/Code/nj-innovation/js/cacheFetchData.js1635029219864869758 0
+58/home/kopasetik/Code/nj-innovation/js/isDueForNewUpdate.js1635076518661667692 0
 52/home/kopasetik/Code/nj-innovation/js/convertTime.js1634862934631702712 0
 50/home/kopasetik/Code/nj-innovation/js/updateDOM.js1634998784929106486 0
-50/home/kopasetik/Code/nj-innovation/js/cacheData.js1634998784929106486 0
-51/home/kopasetik/Code/nj-innovation/js/fetchPrice.js1634998784929106486 0
+62/home/kopasetik/Code/nj-innovation/js/unhighlightCurrencies.js1635142240043828259 0
+51/home/kopasetik/Code/nj-innovation/js/fetchPrice.js1635078108254859991 0
 53/home/kopasetik/Code/nj-innovation/js/processPrice.js1634998784929106486 0
-65/home/kopasetik/Code/nj-innovation/test/isDueForNewUpdate.test.js1634998784929106486 0
-58/home/kopasetik/Code/nj-innovation/test/fetchPrice.test.js1634998784929106486 0
+65/home/kopasetik/Code/nj-innovation/test/isDueForNewUpdate.test.js1635076518661667692 0
+58/home/kopasetik/Code/nj-innovation/test/fetchPrice.test.js1635029219864869758 0
+62/home/kopasetik/Code/nj-innovation/test/cacheFetchData.test.js1635029219864869758 0
 59/home/kopasetik/Code/nj-innovation/test/convertTime.test.js1634862934631702712 0
-39/home/kopasetik/Code/nj-innovation/test1634998784929106486 1
-61/home/kopasetik/Code/nj-innovation/dist/index.435bd059.js.map1634999888357371303 0
+39/home/kopasetik/Code/nj-innovation/test1635142240043828259 1
+61/home/kopasetik/Code/nj-innovation/dist/index.435bd059.js.map1635165791890148903 0
 57/home/kopasetik/Code/nj-innovation/dist/index.e49da3c3.js1634863676766585847 0
 67/home/kopasetik/Code/nj-innovation/node_modules/receptor/LICENSE.md1634862951295000000 0
 61/home/kopasetik/Code/nj-innovation/node_modules/receptor/once1634862993434941653 1
@@ -1948,7 +1950,6 @@
 83/home/kopasetik/Code/nj-innovation/node_modules/core-js/stable/typed-array/every.js1634862966558000000 0
 68/home/kopasetik/Code/nj-innovation/node_modules/iconv-lite/encodings1634862992694951298 1
 81/home/kopasetik/Code/nj-innovation/node_modules/core-js/stable/typed-array/set.js1634862966558000000 0
-57/home/kopasetik/Code/nj-innovation/test/cacheData.test.js1634998784929106486 0
 82/home/kopasetik/Code/nj-innovation/node_modules/core-js/stable/typed-array/from.js1634862966558000000 0
 82/home/kopasetik/Code/nj-innovation/node_modules/core-js/stable/typed-array/fill.js1634862966558000000 0
 90/home/kopasetik/Code/nj-innovation/node_modules/core-js/stable/typed-array/uint32-array.js1634862966558000000 0
@@ -4024,7 +4025,7 @@
 78/home/kopasetik/Code/nj-innovation/node_modules/is-weakref/.github/FUNDING.yml1634862975708000000 0
 87/home/kopasetik/Code/nj-innovation/node_modules/is-weakref/.github/workflows/rebase.yml1634862975708000000 0
 100/home/kopasetik/Code/nj-innovation/node_modules/is-weakref/.github/workflows/require-allow-edits.yml1634862975708000000 0
-45/home/kopasetik/Code/nj-innovation/index.html1634863668650668559 0
+45/home/kopasetik/Code/nj-innovation/index.html1635143273057244308 0
 101/home/kopasetik/Code/nj-innovation/node_modules/jsdom/lib/jsdom/living/nodes/HTMLFrameElement-impl.js1634862959740000000 0
 66/home/kopasetik/Code/nj-innovation/node_modules/is-weakref/.github1634862992738950716 1
 65/home/kopasetik/Code/nj-innovation/node_modules/is-weakref/.nycrc1634862975708000000 0
@@ -9038,7 +9039,7 @@
 88/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/textsms.svg1634862950963000000 0
 87/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/expand.svg1634862950963000000 0
 68/home/kopasetik/Code/nj-innovation/node_modules/date-fns/isSameMonth1634862991954961116 1
-50/home/kopasetik/Code/nj-innovation/dist/index.html1634999888341371532 0
+50/home/kopasetik/Code/nj-innovation/dist/index.html1635165791882149015 0
 79/home/kopasetik/Code/nj-innovation/node_modules/caniuse-lite/data/regions/BJ.js1634862952879000000 0
 86/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/tapas.svg1634862950963000000 0
 91/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/plagiarism.svg1634862950963000000 0
@@ -9664,6 +9665,7 @@
 99/home/kopasetik/Code/nj-innovation/node_modules/date-fns/esm/fp/differenceInCalendarDays/index.d.ts1634862950955000000 0
 99/home/kopasetik/Code/nj-innovation/node_modules/readable-stream/lib/internal/streams/buffer_list.js1630039396052000000 0
 77/home/kopasetik/Code/nj-innovation/node_modules/stream-http/lib/capability.js1634862973548000000 0
+69/home/kopasetik/Code/nj-innovation/test/unhighlightCurrencies.test.js1635142240043828259 0
 95/home/kopasetik/Code/nj-innovation/node_modules/uswds/dist/scss/core/mixins/_unstyled-list.scss1634862950963000000 0
 102/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/browser_not_supported.svg1634862950963000000 0
 95/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/arrow_back_ios.svg1634862950963000000 0
@@ -11354,7 +11356,7 @@
 94/home/kopasetik/Code/nj-innovation/node_modules/uswds/dist/img/material-icons/fast_forward.svg1634862950963000000 0
 90/home/kopasetik/Code/nj-innovation/node_modules/uswds/dist/img/material-icons/zoom_out.svg1634862950963000000 0
 91/home/kopasetik/Code/nj-innovation/node_modules/uswds/dist/img/material-icons/animation.svg1634862950963000000 0
-46/home/kopasetik/Code/nj-innovation/js/index.js1634998784929106486 0
+46/home/kopasetik/Code/nj-innovation/js/index.js1635143273057244308 0
 100/home/kopasetik/Code/nj-innovation/node_modules/@babel/types/lib/comments/inheritTrailingComments.js1634862952391000000 0
 85/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/tune.svg1634862950963000000 0
 90/home/kopasetik/Code/nj-innovation/node_modules/uswds/dist/img/material-icons/filter_9.svg1634862950963000000 0
@@ -13577,7 +13579,7 @@
 83/home/kopasetik/Code/nj-innovation/node_modules/which-boxed-primitive/.eslintignore1634862976102000000 0
 78/home/kopasetik/Code/nj-innovation/node_modules/svgo/plugins/removeUnusedNS.js1634862965950000000 0
 81/home/kopasetik/Code/nj-innovation/node_modules/es-abstract/2019/UnicodeEscape.js1634862975438000000 0
-65/home/kopasetik/Code/nj-innovation/test/highlightCurrency.test.js1634998784929106486 0
+65/home/kopasetik/Code/nj-innovation/test/highlightCurrency.test.js1635142240043828259 0
 90/home/kopasetik/Code/nj-innovation/node_modules/date-fns/esm/locale/mk/_lib/formatRelative1634862999526869154 1
 82/home/kopasetik/Code/nj-innovation/node_modules/domain-browser/.github/FUNDING.yml1634862973361000000 0
 65/home/kopasetik/Code/nj-innovation/node_modules/html-tags/license1634862974417000000 0
@@ -14921,6 +14923,7 @@
 72/home/kopasetik/Code/nj-innovation/node_modules/date-fns/esm/fp/subHours1634862996850899521 1
 85/home/kopasetik/Code/nj-innovation/node_modules/highlight.js/lib/languages/mercury.js1634862971312000000 0
 89/home/kopasetik/Code/nj-innovation/node_modules/uswds/dist/img/material-icons/terrain.svg1634862950963000000 0
+65/home/kopasetik/Code/nj-innovation/test/cacheLastCurrency.test.js1635029219864869758 0
 75/home/kopasetik/Code/nj-innovation/node_modules/har-schema/lib/timings.json1630039403490000000 0
 84/home/kopasetik/Code/nj-innovation/node_modules/date-fns/fp/getDaysInYear/index.d.ts1634862950955000000 0
 95/home/kopasetik/Code/nj-innovation/node_modules/date-fns/esm/locale/te/_lib/formatLong/index.js1634862950955000000 0
@@ -16600,6 +16603,7 @@
 116/home/kopasetik/Code/nj-innovation/node_modules/@babel/helper-define-polyfill-provider/node_modules/semver/README.md1630039380184000000 0
 72/home/kopasetik/Code/nj-innovation/node_modules/date-fns/fp/min/index.js1634862950955000000 0
 93/home/kopasetik/Code/nj-innovation/node_modules/babel-preset-current-node-syntax/src/index.js1630039383081000000 0
+58/home/kopasetik/Code/nj-innovation/js/cacheLastCurrency.js1635029219864869758 0
 71/home/kopasetik/Code/nj-innovation/node_modules/lodash/_getAllKeysIn.js1630039358430000000 0
 69/home/kopasetik/Code/nj-innovation/node_modules/lodash/_hashDelete.js1630039358430000000 0
 70/home/kopasetik/Code/nj-innovation/node_modules/w3c-hr-time/LICENSE.md1630039401604000000 0
@@ -17833,7 +17837,7 @@
 92/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/watch_later.svg1634862950963000000 0
 94/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/move_to_inbox.svg1634862950963000000 0
 99/home/kopasetik/Code/nj-innovation/node_modules/core-js-compat/node_modules/semver/classes/range.js1630039391853000000 0
-39/home/kopasetik/Code/nj-innovation/dist1634999888361371246 1
+39/home/kopasetik/Code/nj-innovation/dist1635165791890148903 1
 75/home/kopasetik/Code/nj-innovation/node_modules/terser/lib/equivalent-to.js1634862966108000000 0
 84/home/kopasetik/Code/nj-innovation/node_modules/date-fns/getISOWeekYear/package.json1634862950955000000 0
 63/home/kopasetik/Code/nj-innovation/node_modules/.bin/sshpk-sign1634863538288221416 0
@@ -18020,7 +18024,7 @@
 90/home/kopasetik/Code/nj-innovation/node_modules/date-fns/fp/isSameWeekWithOptions/index.js1634862950955000000 0
 63/home/kopasetik/Code/nj-innovation/node_modules/@jest/transform1634862988223013997 1
 87/home/kopasetik/Code/nj-innovation/node_modules/css-selector-tokenizer/lib/stringify.js1634862973767000000 0
-34/home/kopasetik/Code/nj-innovation1634869420404168429 1
+34/home/kopasetik/Code/nj-innovation1635143273057244308 1
 55/home/kopasetik/Code/nj-innovation/node_modules/nan/doc1634862993202944642 1
 80/home/kopasetik/Code/nj-innovation/node_modules/es-abstract/helpers/modBigInt.js1634862975438000000 0
 79/home/kopasetik/Code/nj-innovation/node_modules/date-fns/esm/endOfWeek/index.js1634862950955000000 0
@@ -22875,7 +22879,7 @@
 68/home/kopasetik/Code/nj-innovation/node_modules/msgpackr/SECURITY.md1634862970902000000 0
 64/home/kopasetik/Code/nj-innovation/node_modules/dedent/README.md1630039376103000000 0
 84/home/kopasetik/Code/nj-innovation/node_modules/highlight.js/lib/languages/python.js1634862971312000000 0
-57/home/kopasetik/Code/nj-innovation/dist/index.435bd059.js1634999888345371474 0
+57/home/kopasetik/Code/nj-innovation/dist/index.435bd059.js1635165791882149015 0
 91/home/kopasetik/Code/nj-innovation/node_modules/date-fns/locale/lb/_lib/formatLong/index.js1634862950955000000 0
 89/home/kopasetik/Code/nj-innovation/node_modules/highlight.js/lib/languages/mathematica.js1634862971312000000 0
 91/home/kopasetik/Code/nj-innovation/node_modules/caniuse-lite/data/features/notifications.js1634862952879000000 0
@@ -22992,7 +22996,7 @@
 105/home/kopasetik/Code/nj-innovation/node_modules/@parcel/node-libs-browser/node_modules/punycode/README.md1630039388561000000 0
 81/home/kopasetik/Code/nj-innovation/node_modules/@jest/core/build/TestScheduler.js1634862957117000000 0
 81/home/kopasetik/Code/nj-innovation/node_modules/highlight.js/scss/a11y-light.scss1634862971312000000 0
-58/home/kopasetik/Code/nj-innovation/dist/index.a4e33057.css1634999888341371532 0
+58/home/kopasetik/Code/nj-innovation/dist/index.a4e33057.css1635029658710575280 0
 110/home/kopasetik/Code/nj-innovation/node_modules/postcss-modules-values/node_modules/postcss/lib/stringifier.js1634862973739000000 0
 105/home/kopasetik/Code/nj-innovation/node_modules/regenerate-unicode-properties/Script_Extensions/Yezidi.js1634862954773000000 0
 69/home/kopasetik/Code/nj-innovation/node_modules/react-refresh/LICENSE1634862966399000000 0
@@ -27199,7 +27203,7 @@
 89/home/kopasetik/Code/nj-innovation/node_modules/date-fns/locale/zh-TW/_lib/formatRelative1634862998994874987 1
 77/home/kopasetik/Code/nj-innovation/node_modules/date-fns/locale/ru/_lib/match1634862998958875393 1
 65/home/kopasetik/Code/nj-innovation/node_modules/lodash/fp/trim.js1630039358430000000 0
-37/home/kopasetik/Code/nj-innovation/js1634998784929106486 1
+37/home/kopasetik/Code/nj-innovation/js1635143273057244308 1
 94/home/kopasetik/Code/nj-innovation/node_modules/date-fns/locale/zh-TW/_lib/formatLong/index.js1634862950955000000 0
 70/home/kopasetik/Code/nj-innovation/node_modules/encodeurl/package.json1630039389409000000 0
 89/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/img/material-icons/filter_7.svg1634862950963000000 0
@@ -30745,7 +30749,7 @@
 86/home/kopasetik/Code/nj-innovation/node_modules/date-fns/esm/locale/bs/_lib/formatLong1634862999450869987 1
 66/home/kopasetik/Code/nj-innovation/node_modules/lodash/_Promise.js1630039358430000000 0
 84/home/kopasetik/Code/nj-innovation/node_modules/date-fns/esm/locale/bs/_lib/localize1634862999450869987 1
-62/home/kopasetik/Code/nj-innovation/dist/index.a4e33057.css.map1634999888357371303 0
+62/home/kopasetik/Code/nj-innovation/dist/index.a4e33057.css.map1635029658726575051 0
 83/home/kopasetik/Code/nj-innovation/node_modules/date-fns/esm/locale/bs/package.json1634862950955000000 0
 78/home/kopasetik/Code/nj-innovation/node_modules/core-js/es/string/ends-with.js1634862966558000000 0
 75/home/kopasetik/Code/nj-innovation/node_modules/date-fns/constants/index.js1634862950955000000 0
@@ -32898,7 +32902,7 @@
 67/home/kopasetik/Code/nj-innovation/node_modules/lodash/fp/reject.js1630039358430000000 0
 87/home/kopasetik/Code/nj-innovation/node_modules/caniuse-lite/data/features/maxlength.js1634862952879000000 0
 67/home/kopasetik/Code/nj-innovation/node_modules/lodash/fp/isDate.js1630039358430000000 0
-58/home/kopasetik/Code/nj-innovation/js/highlightCurrency.js1634998784929106486 0
+58/home/kopasetik/Code/nj-innovation/js/highlightCurrency.js1635142240043828259 0
 109/home/kopasetik/Code/nj-innovation/node_modules/lmdb-store/dependencies/lmdb-data-v1/libraries/liblmdb/midl.h1634862967008000000 0
 92/home/kopasetik/Code/nj-innovation/node_modules/uswds/src/components/test/sidenav-button.njk1634862950963000000 0
 65/home/kopasetik/Code/nj-innovation/node_modules/lodash/fp/next.js1630039358430000000 0
