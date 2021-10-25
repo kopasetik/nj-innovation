@@ -1,8 +1,8 @@
 /**
  * @jest-environment jsdom
  */
+
 const unhighlightCurrencies = require('../js/unhighlightCurrencies')
-const highlightCurrency = require('../js/highlightCurrency')
 
 describe('highlights selected currency button', ()=>{
     
@@ -23,18 +23,9 @@ describe('highlights selected currency button', ()=>{
     
     })
     
-    it('makes a button highlighted', ()=>{
-        highlightCurrency('euros')
-        
-        expect(document.getElementById('euros-button').classList.contains('usa-button--outline')).toBe(false)
-    })
-    
-
-    it('only has one button highlighted at a time. in other words, only one currency button does not have the usa-button--outline class', ()=>{
+    it('makes all buttons unhighlighted', ()=>{
         unhighlightCurrencies()
-        highlightCurrency('pounds')
     
-        expect(document.getElementsByClassName('usa-button--outline').length).toEqual(document.getElementsByClassName('usa-button').length-1)
-        expect(document.getElementById('pounds-button').classList.contains('usa-button--outline')).toBe(false)
+        expect(document.getElementsByClassName('usa-button--outline').length).toEqual(document.getElementsByClassName('usa-button').length)
     })
 })

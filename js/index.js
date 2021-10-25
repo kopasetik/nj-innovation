@@ -28,6 +28,8 @@ if (localStorage.getItem('ISODate') === null){
     updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
     updateDOM('#price-digits', localStorage.getItem(lastCurrency))
     swapCurrencySymbol(lastCurrency)
+    unhighlightCurrencies()
+    highlightCurrency(lastCurrency)
                                              }
 
 
@@ -59,13 +61,16 @@ main.addEventListener('click', (e) => {
             updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
             updateDOM('#price-digits', localStorage.getItem(lastCurrency))
         swapCurrencySymbol(lastCurrency)
+        unhighlightCurrencies()
+        highlightCurrency(lastCurrency)
             })
             
         }
 
         updateDOM('#price-digits', localStorage.getItem(lastCurrency))
         swapCurrencySymbol(lastCurrency)
-
+        unhighlightCurrencies()
+        highlightCurrency(lastCurrency)
     }
 }, false)
 
