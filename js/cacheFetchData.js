@@ -1,7 +1,7 @@
 const processPrice = require('./processPrice')
 
 const cacheFetchData = async (storage, fetcher) => {
-    storage.setItem('lastUpdated', performance.now())
+    storage.setItem('lastUpdated', Date.now())
     
     return await fetcher(storage).then(([{EUR, GBP, USD}, {updatedISO}]) => {
                 

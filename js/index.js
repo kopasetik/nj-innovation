@@ -11,22 +11,21 @@ const updateDOM = require('./updateDOM')
 
 const main = document.getElementById('main-content')
 
+const updateTimestamp = () => {
+        updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+
+}
 const updatePriceIn = (currency) => {
         updateDOM('#price-digits', localStorage.getItem(currency))
 	updateDOM('#reader-price', `${localStorage.getItem(currency)} ${currency}`)
 }    
 
-if (localStorage.getItem('lastUpdated') === null) {
     cacheFetchData(localStorage, fetchPrice).then(() => {
-        updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+	updateTimestamp()
 	updatePriceIn('dollars')
     })
-}
-
-if (localStorage.getItem('lastCurrency') === null) {
     localStorage.setItem('lastCurrency', 'dollars')
     highlightCurrency('dollars')
-}
 
 if (localStorage.getItem('ISODate') === null){ 
     const now = Date.now()
@@ -34,7 +33,7 @@ if (localStorage.getItem('ISODate') === null){
     localStorage.setItem('ISODate', ISOString)
                                              } else {
     let lastCurrency = localStorage.getItem('lastCurrency')    
-    updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+    updateTimestamp()
     updatePriceIn(lastCurrency)
     swapCurrencySymbol(lastCurrency)
     unhighlightCurrencies()
@@ -49,7 +48,7 @@ main.addEventListener('click', (e) => {
             if (!isDueForNewUpdate(localStorage)) return
             
             return cacheFetchData(localStorage, fetchPrice).then(() => {
-                            updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
+	    updateTimestamp()
             let lastCurrency = localStorage.getItem('lastCurrency')
 	    updatePriceIn(lastCurrency)
             
@@ -67,11 +66,11 @@ main.addEventListener('click', (e) => {
         
         if (isDueForNewUpdate(localStorage)) {
             cacheFetchData(localStorage, fetchPrice).then(() =>{
-            updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
-	updatePriceIn(lastCurrency)
-        swapCurrencySymbol(lastCurrency)
-        unhighlightCurrencies()
-        highlightCurrency(lastCurrency)
+		updateTimestamp()
+		updatePriceIn(lastCurrency)
+		swapCurrencySymbol(lastCurrency)
+		unhighlightCurrencies()
+		highlightCurrency(lastCurrency)
             })
             
         }
