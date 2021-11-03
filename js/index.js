@@ -15,6 +15,7 @@ if (localStorage.getItem('lastUpdated') === null) {
     cacheFetchData(localStorage, fetchPrice).then(() => {
         updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
         updateDOM('#price-digits', localStorage.getItem('dollars'))
+	updateDOM('#reader-price', `${localStorage.getItem('dollars')} dollars`)
     })
 }
 
@@ -31,6 +32,7 @@ if (localStorage.getItem('ISODate') === null){
     let lastCurrency = localStorage.getItem('lastCurrency')    
     updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
     updateDOM('#price-digits', localStorage.getItem(lastCurrency))
+    updateDOM('#reader-price', `${localStorage.getItem(lastCurrency)} ${lastCurrency}`)
     swapCurrencySymbol(lastCurrency)
     unhighlightCurrencies()
     highlightCurrency(lastCurrency)
@@ -47,6 +49,7 @@ main.addEventListener('click', (e) => {
                             updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
             let lastCurrency = localStorage.getItem('lastCurrency')
             updateDOM('#price-digits', localStorage.getItem(lastCurrency))
+	    updateDOM('#reader-price', `${localStorage.getItem(lastCurrency)} ${lastCurrency}`)
             
             })
                 }
@@ -64,6 +67,7 @@ main.addEventListener('click', (e) => {
             cacheFetchData(localStorage, fetchPrice).then(() =>{
             updateDOM('#update-time', convertTime(localStorage.getItem('ISODate')))
             updateDOM('#price-digits', localStorage.getItem(lastCurrency))
+	    updateDOM('#reader-price', `${localStorage.getItem(lastCurrency)} ${lastCurrency}`)
         swapCurrencySymbol(lastCurrency)
         unhighlightCurrencies()
         highlightCurrency(lastCurrency)
@@ -72,6 +76,7 @@ main.addEventListener('click', (e) => {
         }
 
         updateDOM('#price-digits', localStorage.getItem(lastCurrency))
+	updateDOM('#reader-price', `${localStorage.getItem(lastCurrency)} ${lastCurrency}`)
         swapCurrencySymbol(lastCurrency)
         unhighlightCurrencies()
         highlightCurrency(lastCurrency)
